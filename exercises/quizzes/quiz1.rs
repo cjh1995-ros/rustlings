@@ -10,7 +10,17 @@
 
 // TODO: Write a function that calculates the price of an order of apples given
 // the quantity bought.
-// fn calculate_price_of_apples(???) -> ??? { ??? }
+
+const DEFAULT_APPLE_PRICE: u32 = 2;
+const DISCOUNT_APPLE_PRICE: u32 = 1;
+
+fn calculate_price_of_apples(n_apples: u32) -> u32 {
+    if n_apples <= 40 {
+      n_apples * DEFAULT_APPLE_PRICE
+    } else {
+      n_apples * DISCOUNT_APPLE_PRICE
+    }
+}
 
 fn main() {
     // You can optionally experiment here.
